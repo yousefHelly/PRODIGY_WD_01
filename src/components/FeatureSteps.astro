@@ -1,0 +1,42 @@
+---
+import FeatureSection from '../layouts/FeatureSection.astro'
+import { Image } from 'astro:assets'
+import user from '../assets/users.png'
+import compas from '../assets/compas.png'
+import trade from '../assets/task.png'
+import dottedArrowUp from '../assets/arrow-up.png'
+import dottedArrowDown from '../assets/arrow-down.png'
+---
+<FeatureSection>
+    <h3 class="md:w-1/2 leading-relaxed text-center font-bold bg-gradient-to-t bg-clip-text text-transparent from-green to-stone-300 text-3xl
+    md:text-5xl">Peer-to-peer trading has never been easier</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 items-center justify-center my-5 gap-16 md:gap-32">
+        <div class="flex flex-col gap-3 items-center relative">
+            <div class="bg-gradient-to-r from-mainBackground p-5 to-mainLightBackground rounded-3xl">
+                <Image src={user} alt={"create an account"} loading={'eager'} width={50} height={50}/>
+            </div>
+            <strong class="text-xl bg-gradient-to-b bg-clip-text text-center text-transparent from-stone-50 to-stone-500">Create an account</strong>
+            <p class="text-xs gradient-des text-center leading-relaxed font-bold">Join Cripz swiftly for seamless access to crypto trading, prioritizing simplicity, security, and unparalleled opportunities.</p>
+            <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-[140px]">
+                <Image src={dottedArrowUp} alt={'then'} loading={'eager'} class='invert-[0.5]' width={150} height={150}/>
+            </div>
+        </div>
+        <div class="flex flex-col gap-3 items-center relative">
+            <div class=" bg-mainLightBackground p-3 rounded-3xl">
+                <Image src={compas} alt={"create an account"} loading={'eager'} width={75} height={75}/>
+            </div>
+            <strong class="text-xl bg-gradient-to-b bg-clip-text text-center text-transparent from-stone-50 to-stone-500">See who's buying and selling</strong>
+            <p class="text-xs gradient-des text-center leading-relaxed font-bold">Observe real-time buying and selling activities on Cripz's intuitive platform.</p>
+            <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-[140px]">
+                <Image src={dottedArrowDown} alt={'then'} loading={'eager'} class='invert-[0.5]' width={150} height={150}/>
+            </div>
+        </div>
+        <div class="flex flex-col gap-3 items-center">
+            <div class="bg-gradient-to-l from-mainBackground p-3 to-mainLightBackground rounded-3xl">
+                <Image src={trade} alt={"create an account"} width={75} height={75}/>
+            </div>
+            <strong class="text-xl bg-gradient-to-b bg-clip-text text-center text-transparent from-stone-50 to-stone-500">Open a trade</strong>
+            <p class="text-xs gradient-des text-center leading-relaxed font-bold">Initiate trades swiftly and securely on the Cripz platform, maximizing your investment potential.</p>
+        </div>
+    </div>
+</FeatureSection>

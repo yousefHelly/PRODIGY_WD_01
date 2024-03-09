@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+import advCash from '../assets/adv-cach.png'
+import payoneer from '../assets/payoneer.png'
+import paypal from '../assets/paypal.png'
+import qiwi from '../assets/qiwi.png'
+import revolut from '../assets/revolut.png'
+import visa from '../assets/visa.png'
+import wise from '../assets/wise.png'
+let imgs = [advCash, payoneer, paypal, qiwi, revolut, visa, wise]
+---
+<div class="container mx-auto flex items-center justify-center flex-col gap-5 pt-10 pb-2">    
+    <p class="uppercase text-center gradient-des font-bold text-sm">Buy and sell cryptocurrency using any payment method</p>
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-10 items-center xl:grid-cols-7">
+        {
+            imgs.map((img)=>{
+                return <Image src={img} alt={''} width={150} height={50} format='webp'/>
+            })
+        }
+    </div>
+</div>
