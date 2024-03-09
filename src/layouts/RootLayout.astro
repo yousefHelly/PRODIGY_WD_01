@@ -11,14 +11,15 @@ const {page} = Astro.props
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/criptz_logo.png" />
+		<link rel="icon" type="image/png" href="/logo.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{page} - cripz</title>
+		<meta name="description" content="Cripz is a Secure decentralized anonymous platform where people manage cryptocurrencies using any payment methods.">
 	</head>
 	<body  class="bg-mainBackground text-stone-50">
 		<div class="h-[50rem] w-full bg-mainBackground text-stone-50 bg-dot-white/[0.60] -z-10 fixed">
-			<div class="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+			<div class="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 		</div>
 		<Header {page}/>
 		<main class="z-10">

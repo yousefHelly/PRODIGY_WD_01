@@ -7,6 +7,7 @@ import edge from '../assets/edge.png'
 import safari from '../assets/safari.png'
 import chrome from '../assets/chrome.png'
 import { Image } from 'astro:assets'
+import logo from '../assets/logo.png'
 import { AlignCenter, ArrowDownLeftFromCircleIcon, ArrowUpRightFromCircle, Lock, RefreshCw } from 'lucide-react'
 import browserExtension  from '../assets/browser-extension.png'
 const browsers = [opera, brave, firefox, edge, safari, chrome]
@@ -49,7 +50,7 @@ const browsers = [opera, brave, firefox, edge, safari, chrome]
         <div class="bg-mainLightBackground/30 relative mt-10 ml-16 p-4 flex items-center flex-col gap-5 w-[22rem] rounded-t-md">
             <div class="flex items-center">
                 <a href='/' class='flex items-center gap-3'>
-                    <Image src={'/criptz_logo.png'} alt="cripz logo" class='mt-2' loading={'eager'} width={30} height={30}/>
+                    <Image src={logo} alt="cripz logo" class='mt-2' loading={'eager'} width={30} height={30}/>
                     <h3 class='text-2xl mt-1'>cripz</h3>
                 </a>
                 <AlignCenter className='absolute right-5 top-[1.6rem] text-stone-300'/>

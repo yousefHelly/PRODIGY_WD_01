@@ -2,17 +2,18 @@
 import LangChanger from './LangChanger'
 import ResponsiveNav from '../components/ResponsiveNav.tsx'
 import { Image } from 'astro:assets'
+import logo from '../assets/logo.png'
 interface Props  {
     page: string
 }
 const {page} = Astro.props
 ---
-<nav class='hidden md:block z-20 sticky top-0 bg-transparent'>
+<nav class='hidden lg:block z-20 sticky top-0 bg-transparent'>
     <div class="px-20 border-b border-mainLightBackground/75 bg-mainBackground/75 backdrop-blur-sm flex justify-between items-center py-5 ">
         <div class='flex items-center gap-4'>
             <div class='-mt-2'>
                 <a href='/' class='flex items-center gap-3'>
-                    <Image src={'/criptz_logo.png'} alt="cripz logo" class='mt-2' loading={'eager'} width={30} height={30}/>
+                    <Image src={logo} alt="cripz logo" class='mt-2' loading={'eager'} width={30} height={30}/>
                     <h3 class='text-2xl mt-1'>cripz</h3>
                 </a>
             </div>
@@ -33,7 +34,7 @@ const {page} = Astro.props
         </div>
     </div>
 </nav>
-<nav class="flex px-6 md:hidden z-20 sticky top-0 border-b border-mainLightBackground/75 bg-mainBackground/75 backdrop-blur-sm justify-between items-center py-5 ">
+<nav class="flex px-6 lg:hidden z-20 sticky top-0 border-b border-mainLightBackground/75 bg-mainBackground/75 backdrop-blur-sm justify-between items-center py-5 ">
     <div class='flex items-center gap-4'>
         <div class='-mt-2'>
             <a href='/' class='flex items-center gap-3'>
@@ -45,5 +46,5 @@ const {page} = Astro.props
             v1.0
         </div>
     </div>
-    <ResponsiveNav page={page} client:media='(max-width: 767px)'/>
+    <ResponsiveNav page={page} client:media='(max-width: 1023px)'/>
 </nav>
